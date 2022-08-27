@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+
+
+header{
+    display: flex;
+    justify-content: end;
+}
+
+nav{
+    width: 100%;
+}
+
+.navbar-brand{
+    color: black;
+    align-self: flex-start;
+}
+
+/*-------------------main--------------------*/
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+
+}
+
+.bicho h2{
+    grid-area: h2bicho;
+
+}
+
+.fotocr{
+    grid-area: imgbicho;
+}
+
+.fotocr img{
+    width: 100%;
+}
+
+.contenidocr{
+    grid-area: parrafocr;
+}
+
+.bicho{
+    margin: 1rem 0;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 2rem;
+    grid-template-areas: 
+        "h2bicho"
+        "imgbicho"
+        "parrafocr"
+    ;
+    justify-items: center;
+}
+
+
+.inicioscr h2{
+    grid-area: h2inicio;
+}
+
+.infocr{
+    grid-area: informacion;
+}
+
+.seccionfoto{
+    grid-area: fotocr;
+}
+
+.inicioscr{
+    margin: 1rem 0;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 2rem;
+    grid-template-areas:
+        "h2inicio"
+        "fotocr"
+        "informacion"
+    ;
+    justify-items: center;
+}
+
+
+footer{
+    background-color: brown;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 3em;
+}
+
+@media screen and (min-width: 600px){
+
+
+.title{
+    margin: 0;
+}
+
+}
+
+
+@media screen and (min-width: 1024px){
+    .bicho{
+        margin: 1rem 0 3rem 0;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5rem auto;
+        gap: 2rem;
+        grid-template-areas: 
+            "h2bicho h2bicho"
+            "imgbicho parrafocr"
+        ;
+        justify-items: center;
+}
+
+    .inicioscr{
+    margin: 1rem 0 3rem 0;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem auto;
+    gap: 2rem;
+    grid-template-areas:
+        "h2inicio h2inicio"
+        "informacion fotocr"
+    ;
+    justify-items: center;
+}
+
+
+}
+
+
+
+@keyframes agrandar{
+    0%{
+        width: 101%;
+        height: 103%;
+    }
+    100%{
+        width: 103%;
+        height: 103%;
+    }
+}
+
+img:hover{
+    animation-name: agrandar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+
+
+
